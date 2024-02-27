@@ -1,0 +1,24 @@
+/*! ======================================
+    Template Name : VA
+    Author Name: Arif Hossain
+    Author Url: http://webdeveloperarif.com/
+    Version: 1.0.0
+=========================================*/ 
+
+// GLOBAL
+@import "../global/variables";
+
+// VENDORS
+@import "../bootstrap/bootstrap";
+
+@import "./resets";
+
+// fontend
+@import "./predefine";
+@import "./buttons";
+@import "./header";
+@import "./home";
+@import "./inner-page";
+@import "./footer";
+
+
