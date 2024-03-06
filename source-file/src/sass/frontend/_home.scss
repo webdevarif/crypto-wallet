@@ -1,0 +1,171 @@
+/* Hero Area css
+============================================================================================ */
+.sec-hero{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+    @include media-breakpoint-up(xxl){
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 90vh;
+    }
+
+    &--content{
+        @include media-breakpoint-up(xl){
+            font-size: 20px;
+        }
+    }
+
+    &--features{
+        margin-bottom: -130px;
+        margin-top: 50px;
+        @include media-breakpoint-up(lg){
+            margin-bottom: -180px;
+        }
+    }
+
+    .features--single {
+        max-width: 20rem;
+        margin: auto;
+    }
+}
+
+
+/* Text Banner css
+============================================================================================ */
+.sec-text-banner{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    @include media-breakpoint-up(xxl){
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+
+
+/* Features css
+============================================================================================ */
+.sec-features{
+    background-color: #FAFFFE;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* innovation css
+============================================================================================ */
+.sec-innovation{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: $dark;
+    background-image: url('../images/innovation--bg.png');
+    background-position: center;
+    background-size: cover;
+    color: $white;
+
+    @include media-breakpoint-up(xl){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &--content{
+        @include media-breakpoint-up(xl){
+            font-size: 20px;
+        }
+    }
+}
+
+/* leadership css
+============================================================================================ */
+.sec-leadership{
+    padding-top: 50px;    
+    padding-bottom: 50px;
+    overflow: hidden;  
+
+    .video--cover{
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+
+        &-logo{
+            max-width: 50vw;
+        }
+
+        &-play{
+            position: absolute;
+            top: 2rem;
+            right: 4rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            background: $primary;
+            color: $white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                pointer-events: none;
+                transition: all 0.2s;
+                background-color: $primary;
+                box-shadow: inset 0 0 1rem rgba(1, 246, 209, 0.125);
+                transform-origin: 50% 50%;
+                animation: grow 3s infinite;
+                animation-timing-function: ease-out;
+            }
+        }
+
+        &::before{
+            content: "";
+            width: 100vh;
+            height: 100%;
+            border-top: 9px solid rgba(1, 246, 209, 0.1);
+            border-right: 9px solid rgba(1, 246, 209, 0.1);
+            border-bottom: 9px solid rgba(1, 246, 209, 0.1);
+            position: absolute;
+            border-top-right-radius: 34px;
+            border-bottom-right-radius: 34px;
+            right: 0px;
+            top: 0px;
+        }
+    }
+}
+
+
+@keyframes grow {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.75);
+    }
+    70% {
+      transform: scale(1.75);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.75);
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,443 @@
+body {
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: $ff-primary;
+    font-weight: 400;
+    color: $text-color;
+    background: #F8FAFE;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark;
+    font-family: $ff-primary;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+
+    @include media-breakpoint-between(sm, md){
+        font-size: 4rem;
+        line-height: 1.1;
+    }
+    @include media-breakpoint-between(md, lg){
+        font-size: 70px;
+        line-height: 0.9;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 96px;
+        line-height: 0.9;
+    }
+}
+
+h2 {
+    font-size: 26px;
+    @include media-breakpoint-up(xl){
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-size: 18px;
+    @include media-breakpoint-up(xl){
+        font-size: 30px;
+    }
+}
+
+h4 {
+    font-size: 17px;
+    @include media-breakpoint-up(xl){
+        font-size: 24px;
+    }
+}
+
+h5 {
+    font-size: 16px;
+    @include media-breakpoint-up(xl){
+        font-size: 18px;
+    }
+}
+
+h6 {
+    font-size: 12px;
+    @include media-breakpoint-up(xl){
+        font-size: 15px;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    @include transition();
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.slick-slide:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.slick-slide img {
+    display: inline-block !important;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 0 21px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 0 21px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input::placeholder, textarea::placeholder {
+    font-weight: 400;
+}
+
+button {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+// FONT SIZE
+
+.fs{
+
+    &--xs {
+        font-size: 10px;
+        @include media-breakpoint-up(xl){
+            font-size: 12px;
+        }
+    }
+
+    &--sm {
+        font-size: 12px;
+        @include media-breakpoint-up(xl){
+            font-size: 14px;
+        }
+    }
+
+    &--md {
+        font-size: 15px;
+        @include media-breakpoint-up(xl){
+            font-size: 16px;
+        }
+    }
+    
+    &--lg {
+        font-size: 16px;
+        @include media-breakpoint-up(xl){
+            font-size: 18px;
+        }
+    }
+    
+    &--xl {
+        font-size: 18px;
+        @include media-breakpoint-up(xl){
+            font-size: 20px;
+        }
+    }
+    
+    &--2xl {
+        font-size: 20px;
+        @include media-breakpoint-up(xl){
+            font-size: 22px;
+        }
+    }
+    
+    &--5xl {
+        font-size: 30px;
+        @include media-breakpoint-up(xl){
+            font-size: 50px;
+        }
+    }
+    
+    &--6xl {
+        font-size: 40px;
+        @include media-breakpoint-up(xl){
+            font-size: 64px;
+        }
+    }   
+    
+    &--7xl {
+        font-size: 36px;
+        @include media-breakpoint-up(xl){
+            font-size: 90px;
+        }
+    }
+    
+    &--13 {
+        font-size: 13px;
+    }
+}
+
+.card{
+    --bs-card-border-radius: 24px;
+    --bs-card-border-color: transparent;
+    box-shadow: var(--bs-box-shadow-lg);
+}
+
+.shadow {
+    &-sm {
+        --bs-box-shadow-sm: 0px 5px 60px rgba(0, 0, 0, 0.05);
+    }
+    &-lg {
+        --bs-box-shadow-lg: 0px 25px 50px #F0F4FC;
+    }
+    &-xl {
+        --bs-box-shadow-lg: 0px 25px 50px #EBF0F9;
+    }
+}
+.rounded {
+    &-sm {
+        border-radius: 8px;
+    }
+    &-lg {
+        border-radius: 1.563rem !important;
+    }
+    &-xl {
+        border-radius: 30px !important;
+        @include media-breakpoint-up(xl){
+            border-radius: 60px !important;
+        }
+        
+    }
+}
+
+.ls{
+    &--md{
+        letter-spacing: 1px;
+    }
+}
+
+.lh{
+    &--xs{
+        line-height: 1;
+    }
+}
+
+.pt{
+    &--lg{
+        padding-top: 70px;
+    
+        @include media-breakpoint-up(xl){
+            padding-top: 100px;
+        }
+    }
+    &--xl{
+        padding-top: 170px;
+    }
+}
+.pb{
+    &--lg{
+        padding-bottom: 70px;
+    
+        @include media-breakpoint-up(xl){
+            padding-bottom: 100px;
+        }
+    }
+    &--xl{
+        padding-bottom: 70px;
+    
+        @include media-breakpoint-up(xl){
+            padding-bottom: 150px;
+        }
+    }
+}
+
+.section-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-up(xl){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
+
+.bg-light-gradient{
+    background: linear-gradient(180deg, #EEF3FB 0%, rgba(238, 243, 251, 0) 100%) !important; 
+}
+
+.text-light{
+    color: #7A8FAF !important;
+}
+.text-lighter{
+    color: #494D7A !important;
+}
+.border-light{
+    border-color: #EEF3FB !important;
+}
+
+.form{
+
+    &-label{
+        font-size: 15px;
+    }
+
+    &-select,
+    &-control{
+        height: 56px;
+        padding: 15px 25px;
+        border: 0.5px solid #EEEEEE;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+    }
+    &-control::placeholder{
+        color: #AAAAAA;
+        font-size: 13px;
+    }
+}
+
+
+.list--social{
+
+    &-icon{
+        --social-icon--size: 30px;
+        width: var(--social-icon--size);
+        height: var(--social-icon--size);
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.select--language{
+    padding: 12px 35px 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #DBE1EB;
+    background-color: transparent;
+    font-size: 11px;
+    line-height: 14px;
+    border-radius: 8px;
+    height: auto;
+    font-weight: 500;
+    box-shadow: none;
+}
+
+.py-100{
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include media-breakpoint-up(xl){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
+
+.list--purpose {
+    padding-left: 30px;
+}
+.list--purpose .list-item {
+    border: 1px solid #D7DEE9;
+    border-radius: 16px;
+    padding: 25px 20px;
+    padding-left: 30px;
+    position: relative;
+    @include media-breakpoint-up(xl){
+        border-radius: 22px;
+        padding: 25px 20px;
+        padding-left: 40px;
+    }
+
+    .list-item--heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+        @include media-breakpoint-up(xl){
+            font-size: 28px;
+        }
+    }
+
+    .list-item--icon{
+        box-shadow: 0px 4px 10px rgba(53, 161, 255, 0.4);
+        display: inline-flex;
+        align-items: center;
+        border-radius: 50px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 40px;
+        left: -20px;
+
+        @include media-breakpoint-up(xl){
+            max-width: 50px;
+            left: -28px;
+        }
+        
+    }
+    .list-item--content {
+        color: #494D7A;
+        font-size: 12px;
+        line-height: 18px;
+        @include media-breakpoint-up(xl){
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}
+
+
+.btn-outline-light.btn--text-dark{
+    --bs-btn-color: #{$dark};
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-border-color: #{$primary};
+}
